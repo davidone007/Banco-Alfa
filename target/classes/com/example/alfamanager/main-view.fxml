@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.alfamanager.controller.MainController">
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="typeColumn" text="Type" />
+            <TableColumn fx:id="descriptionColumn" text="Description" />
+            <TableColumn fx:id="valueColumn" text="Value" />
+            <TableColumn fx:id="dateColumn" text="Date" />
+        </columns>
+    </TableView>
+
+    <HBox>
+        <Label fx:id="balanceLabel" contentDisplay="RIGHT" text="Balance: 0.0" textFill="#3a15a8" textOverrun="CLIP">
+            <font>
+                <Font name="BebasNeueBold" size="14.0" />
+            </font></Label>
+    </HBox>
+
+    <HBox>
+        <Button fx:id="addButtonFinancialMovement" onAction="#onAddFinancialMovement" text="Add" />
+        <Button fx:id="seeCostsButton" onAction="#onShowCostsOnly" text="Show costs" />
+        <Button fx:id="seeIncomesButton" onAction="#onShowIncomesOnly" text="Show incomes" />
+        <Button fx:id="seeCostsAndIncomesButton" onAction="#onShowAllMovements" text="Show costs and incomes" />
+
+
+    </HBox>
+
+</VBox>
